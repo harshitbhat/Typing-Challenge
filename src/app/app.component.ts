@@ -15,4 +15,11 @@ export class AppComponent {
     const value = target.value;
     this.enteredText = value;
   }
+
+  compare(letter: string, enteredLetter: string): string {
+    if (!enteredLetter) {
+      return 'pending';
+    }
+    return enteredLetter === letter ? 'correct' : 'incorrect';
+  }
 }
